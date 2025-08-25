@@ -1,0 +1,159 @@
+<!-- <div>
+  <p>Welcome to BillSync!</p>
+  <p>Create your new account here!</p>
+</div>
+<div>
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate>
+    <div *ngIf="error$ | async as error" class="error">{{ error.message }}</div>
+
+    <label>Name:</label>
+    <input type="text" formControlName="name" />
+    <div
+      *ngIf="signupForm.get('name')?.touched && signupForm.get('name')?.invalid"
+    >
+      <small *ngIf="signupForm.get('name')?.errors?.['required']"
+        >Name is required.</small
+      >
+      <small *ngIf="signupForm.get('name')?.errors?.['minlength']">
+        Name must be at least 3 characters.
+      </small>
+    </div>
+
+    <label>Email:</label>
+    <input type="email" formControlName="email" />
+    <div
+      *ngIf="
+        signupForm.get('email')?.touched && signupForm.get('email')?.invalid
+      "
+    >
+      <small *ngIf="signupForm.get('email')?.errors?.['required']"
+        >Email is required.</small
+      >
+      <small *ngIf="signupForm.get('email')?.errors?.['email']">
+        Email must be in a correct format.
+      </small>
+    </div>
+
+    <label>Password:</label>
+    <input type="password" formControlName="password" />
+    <div
+      *ngIf="
+        signupForm.get('password')?.touched &&
+        signupForm.get('password')?.invalid
+      "
+    >
+      <small *ngIf="signupForm.get('password')?.errors?.['required']"
+        >Password is required.</small
+      >
+      <small *ngIf="signupForm.get('password')?.errors?.['minlength']">
+        Minimum length of the password is 8
+      </small>
+      <small *ngIf="signupForm.get('password')?.errors?.['maxlength']">
+        Maximum length of the password is 12
+      </small>
+    </div>
+
+    <label>Phone Number: </label>
+    <input type="text" formControlName="phoneNumber" />
+    <div
+      *ngIf="
+        signupForm.get('phoneNumber')?.touched &&
+        signupForm.get('phoneNumber')?.invalid
+      "
+    >
+      <small *ngIf="signupForm.get('phoneNumber')?.errors?.['required']"
+        >Phone Number is required.</small
+      >
+      <small *ngIf="signupForm.get('phoneNumber')?.errors?.['pattern']">
+        Incorrect phone number format
+      </small>
+    </div>
+    <button type="submit">Sign Up</button>
+  </form>
+</div> -->
+
+<div class="card">
+  <div>
+    <p>Welcome to BillSync!</p>
+    <p>Create your new account here!</p>
+  </div>
+  <div>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate>
+      <div *ngIf="error$ | async as error" class="error">
+        {{ error.message }}
+      </div>
+
+      <label>Name:</label>
+      <input type="text" formControlName="name" />
+      <div
+        *ngIf="
+          signupForm.get('name')?.touched && signupForm.get('name')?.invalid
+        "
+      >
+        <small *ngIf="signupForm.get('name')?.errors?.['required']"
+          >Name is required.</small
+        >
+        <small *ngIf="signupForm.get('name')?.errors?.['minlength']">
+          Name must be at least 3 characters.
+        </small>
+      </div>
+
+      <label>Email:</label>
+      <input type="email" formControlName="email" />
+      <div
+        *ngIf="
+          signupForm.get('email')?.touched && signupForm.get('email')?.invalid
+        "
+      >
+        <small *ngIf="signupForm.get('email')?.errors?.['required']"
+          >Email is required.</small
+        >
+        <small *ngIf="signupForm.get('email')?.errors?.['email']"
+          >Email must be in a correct format.</small
+        >
+      </div>
+
+      <label>Password:</label>
+      <input type="password" formControlName="password" />
+      <div
+        *ngIf="
+          signupForm.get('password')?.touched &&
+          signupForm.get('password')?.invalid
+        "
+      >
+        <small *ngIf="signupForm.get('password')?.errors?.['required']"
+          >Password is required.</small
+        >
+        <small *ngIf="signupForm.get('password')?.errors?.['minlength']">
+          Minimum length of the password is 8
+        </small>
+        <small *ngIf="signupForm.get('password')?.errors?.['maxlength']">
+          Maximum length of the password is 12
+        </small>
+      </div>
+
+      <label>Phone Number: </label>
+      <input type="text" formControlName="phoneNumber" />
+      <div
+        *ngIf="
+          signupForm.get('phoneNumber')?.touched &&
+          signupForm.get('phoneNumber')?.invalid
+        "
+      >
+        <small *ngIf="signupForm.get('phoneNumber')?.errors?.['required']"
+          >Phone Number is required.</small
+        >
+        <small *ngIf="signupForm.get('phoneNumber')?.errors?.['pattern']"
+          >Incorrect phone number format</small
+        >
+      </div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p class="login-text">
+      Already have an account?
+      <a href="/login" class="login-link">Login</a>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+/* Full-page centered layout */
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  /* Subtle professional gradient */
+  background: linear-gradient(135deg, #ece9e6, #ffffff);
+}
+
+/* Card with clean design */
+.landing-card {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
+  background: #fff;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Typography */
+.title {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.subtitle {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Button group */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Buttons */
+.btn {
+  min-width: 120px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  text-transform: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+}
