@@ -1,0 +1,107 @@
+<!-- <div>
+  <p>Welcome to BillSync!</p>
+  <p>Login to your account here!</p>
+</div>
+<div>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div *ngIf="error$ | async as error" class="error">
+      {{ error.message }}
+    </div>
+
+    <label>Email:</label>
+    <input type="email" formControlName="email" />
+    <div
+      *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid"
+    >
+      <small *ngIf="loginForm.get('email')?.errors?.['required']"
+        >Email is required.</small
+      >
+      <small *ngIf="loginForm.get('email')?.errors?.['email']">
+        Email must be in a correct format.
+      </small>
+    </div>
+
+    <label>Password:</label>
+    <input type="password" formControlName="password" />
+    <div
+      *ngIf="
+        loginForm.get('password')?.touched && loginForm.get('password')?.invalid
+      "
+    >
+      <small *ngIf="loginForm.get('password')?.errors?.['required']"
+        >Password is required.</small
+      >
+      <small *ngIf="loginForm.get('password')?.errors?.['minlength']">
+        Minimum length of the password is 8
+      </small>
+      <small *ngIf="loginForm.get('password')?.errors?.['maxlength']">
+        Maximum length of the password is 12
+      </small>
+    </div>
+    <button type="submit">Login In</button>
+  </form>
+</div> -->
+
+<div class="card">
+  <h2 class="card-title">Welcome to BillSync</h2>
+  <p class="card-subtitle">Sign in or create a new account to continue</p>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <div *ngIf="error$ | async as error" class="error-message">
+      {{ error.message }}
+    </div>
+
+    <label class="form-label">Email:</label>
+    <input type="email" formControlName="email" class="form-input" />
+    <div
+      *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid"
+    >
+      <small
+        *ngIf="loginForm.get('email')?.errors?.['required']"
+        class="validation-error"
+      >
+        Email is required.
+      </small>
+      <small
+        *ngIf="loginForm.get('email')?.errors?.['email']"
+        class="validation-error"
+      >
+        Email must be in a correct format.
+      </small>
+    </div>
+
+    <label class="form-label">Password:</label>
+    <input type="password" formControlName="password" class="form-input" />
+    <div
+      *ngIf="
+        loginForm.get('password')?.touched && loginForm.get('password')?.invalid
+      "
+    >
+      <small
+        *ngIf="loginForm.get('password')?.errors?.['required']"
+        class="validation-error"
+      >
+        Password is required.
+      </small>
+      <small
+        *ngIf="loginForm.get('password')?.errors?.['minlength']"
+        class="validation-error"
+      >
+        Minimum length of the password is 8
+      </small>
+      <small
+        *ngIf="loginForm.get('password')?.errors?.['maxlength']"
+        class="validation-error"
+      >
+        Maximum length of the password is 12
+      </small>
+    </div>
+
+    <button type="submit" class="btn-submit">Login</button>
+  </form>
+
+  <p class="signup-text">
+    Don't have an account?
+    <a href="/signup" class="signup-link">Sign Up</a>
+  </p>
+</div>
